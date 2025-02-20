@@ -1,7 +1,10 @@
-var numLimite = parseInt(prompt('Você quer adivinhar o número secreto entre 1 e quanto?\nDigite aqui: '));
+var numLimite = setarNumlimite();
 
 var randomNum = gerarNumeroAleatorio();
 var tentativas = 1;
+
+console.log(numLimite);
+console.log(randomNum);
 
 var titulo = document.querySelector('h1');
 var para = document.querySelector('.texto__paragrafo');
@@ -49,15 +52,19 @@ function verificarChute(){
             tentativas++;
         limparChute();
         }
-    } else {
+    } else if(chute > numLimite){
         setGameOver();
         exibirTexto('h1', 'Erro!');
         exibirTexto('p', `O número que você inseriu é maior que ${numLimite}`);
+    } else if(chute <= 0){
+        setGameOver();
+        exibirTexto('h1', 'Erro!');
+        exibirTexto('p', `O número que você inseriu é menor que 1`);
     }
 };
 
 function gerarNumeroAleatorio() {
-    return parseInt(Math.random()*numLimite)+1;
+    return Math.floor(Math.random()*numLimite)+1;
 }
 
 function limparChute() {
@@ -68,14 +75,22 @@ function limparChute() {
 
 function resetGame() {
     limparChute();
-    exibirMensagemInicial();
     resetButton.setAttribute('disabled',true);
+    numLimite = setarNumlimite();
     randomNum = gerarNumeroAleatorio();
-    sendChute.disabled = false
+    sendChute.disabled = false;
+    exibirMensagemInicial();
 }
 
 function setarNumlimite(){
-    numLimite = parseInt(prompt('Você quer adivinhar o número secreto entre 1 e quanto?\nDigite aqui: '))
+    let limite = parseInt(prompt('Você quer adivinhar o número secreto entre 1 e quanto?\nDigite aqui: '));
+
+    if(limite>0){
+        return limite;
+    } else {
+        alert('Por favor, insira um número maior que zero!');
+        return setarNumlimite();
+    }
 }
 
 sendChute.addEventListener('click', verificarChute);
