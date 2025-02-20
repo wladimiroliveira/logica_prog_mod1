@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio da Aula 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Desafios da Aula 3</h1>
+    <p>Lista de exercícios da aula 03</p>
+
+    <div class="ex01 ex">
+        <h2 class="ex01__titulo">Exercício 01</h2>
+        <p class="ex01__texto">Crie uma função que calcule o índice de massa corporal (IMC) de uma pessoa, a partir de sua altura, em metros, e peso, em quilogramas, que serão recebidos como parâmetro.</p>
+
+        <div class="ex01__form">
+            <h3 class="ex01__form__titulo"> Digite aqui as informações</h3>
+            <label for="peso">Peso</label>
+            <input name="peso" id="campoPeso" type="number" placeholder="Digite o peso em Kg">
+            <label for="altura">Altura</label>
+            <input id="campoAltura" type="number" placeholder="Digite a altura em metros">
+            <input name="altura" id="enviarImc" type="submit" placeholder="Calcular">
+            <p id="paraResult" class="ex01__form__result"></p>
+        </div>
+    </div>
+    <div class="ex02 ex">
+        <h2 class="ex02__titulo">Execício 02</h2>
+        <p class="ex02__texto">Crie uma função que calcule o valor do fatorial de um número passado como parâmetro.</p>
+
+        <div class="ex02__form">
+            <h3 class="ex02__form__titulo">Descubra o fatorial de um número</h3>
+            <p class="ex02__form__texto">Digite um valor para ver o valor do seu fatorial. O número precisa ser inteiro e positivo!</p>
+            <label for="valor">Digite um valor: </label>
+            <input type="number" name="valor" id="campoValorFatorial" placeholder="Digite um número">
+            <input type="submit" id="submitValorToFactor">
+            <p class="ex02__form__texto" id="fatorialResult"></p>
+        </div>
+    </div>
+    <div class="ex03 ex">
+        <h2 class="ex03__titulo">Exercício 03</h2>
+        <p class="ex03__texto">Crie uma função que converte um valor em dólar, passado como parâmetro, e retorne o valor equivalente em reais. Para isso, considere a cotação do dólar igual a R$4,80.</p>
+
+        <div class="ex03__form">
+            <h3 class="ex03__form__titulo">Conversor de moedas</h3>
+            <p class="ex03__form__texto">Digite aqui um valor em dólar e descubra quanto ele vale em reais!</p>
+            <label for="valorDolar">Digite aqui o valor em dólar: </label>
+            <input type="number" name="valorDolar" id="campoValorDolar" placeholder="Insira aqui o valor">
+            <input type="submit" id="enviarDolar">
+            <p class="ex03__form__texto" id="resultConvert"></p>
+        </div>
+    </div>
+
+    <div class="ex04 ex">
+        <h2 class="ex04__titulo">Exercício 04</h2>
+        <p class="ex04__texto">Crie uma função que mostre na tela a área e o perímetro de uma sala retangular, utilizando largura e o comprimento que serão dadas como parâmetro.</p>
+
+        <div class="ex04__form">
+            <h3 class="ex04__form__titulo">Calcular Área e Perímetro</h3>
+            <p class="ex04__form__texto">Digite aqui a largura e o comprimento da sala cuja qual você deseja descobrir a área e o perímetro</p>
+
+            <label for="largura">Largura: </label>
+            <input type="number" name="largura" id="campoLargura" placeholder="Digite aqui a largura">
+            <label for="comprimento">Comprimento: </label>
+            <input type="number" name="comprimento" id="campoComprimento" placeholder="Digite aqui o comprimento">
+            <input type="submit" id="enviarDadosSala">
+
+            <div class="ex04__resultParas">
+                <p class="ex04__form__texto" id="areaResult"></p>
+                <p class="ex04__form__texto" id="periResult"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="ex05 ex">
+        <h2 class="ex05__titulo">Exercício 05</h2>
+        <p class="ex05__texo">Crie uma função que mostre na tela a área e o perímetro de uma sala circular, utilizando seu raio que será fornecido como parâmetro. Considere Pi = 3,14.</p>
+
+        <div class="ex05__form">
+            <h3 class="ex05__form__titulo">Perímetro de uma sala circular</h3>
+            <p class="ex05__form__texto">Digite aqui o valor do raio da sala que você deseja descobrir o perímetro.</p>
+
+            <label for="raio">Digite o raio aqui: </label>
+            <input type="number" name="raio" id="campoRaio" placeholder="Digite o valor aqui">
+            <input type="submit" id="enviarRaio">
+
+            <p class="ex05__form__texto" id="resultPerimetroCircular"></p>
+        </div>
+    </div>
+
+    <div class="ex06 ex">
+        <h2 class="ex06__titulo">Exercício 06</h2>
+        <p class="ex06__texto">Crie uma função que mostre na tela a tabuada de um número dado como parâmetro.</p>
+
+        <div class="ex06__form">
+            <h3 class="ex06__form__titulo">Tabuada</h3>
+            <p class="ex06__form__titulo">Digite aqui qualquer número, e veja a sua tabuada.</p>
+
+            <label for="campoNumero">Digite aqui o número: </label>
+            <input type="number" name="campoNumero" id="campoNumero" placeholder="Digite o número aqui">
+            <input type="submit" id="enviarNumero">
+
+            <p class="ex06__form__texto" id="resultTabuada"></p>
+        </div>
+    </div>
+<script src="app.js" defer></script>
+</body>
+</html>
