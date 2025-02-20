@@ -65,7 +65,7 @@ function verificarChute(){
 
 function gerarNumeroAleatorio() {
     return Math.floor(Math.random()*numLimite)+1;
-}
+};
 
 function limparChute() {
     chute = document.querySelector('input');
@@ -80,6 +80,7 @@ function resetGame() {
     randomNum = gerarNumeroAleatorio();
     sendChute.disabled = false;
     exibirMensagemInicial();
+    tentativas = 1;
 }
 
 function setarNumlimite(){
